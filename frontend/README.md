@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🟣 Axiom Pulse – Token Discovery Dashboard
 
-## Getting Started
+A pixel-clean, high-performance token discovery dashboard inspired by axiom.trade/pulse, built using Next.js 14, TypeScript, and a Node.js REST + WebSocket backend.
 
-First, run the development server:
+🚀 Live Demo
+🔹 Frontend (Vercel)
 
-```bash
+👉 https://axiom-pulse-ksdk-g669b5thd-dineshkumars-projects-9d3fd9d0.vercel.app/pulse
+
+🔹 Backend (Render)
+
+👉 https://axiom-pulse.onrender.com
+
+📦 GitHub Repository
+
+👉 https://github.com/dineshkumardk/axiom-pulse
+
+✨ Features
+Core Features
+
+Token discovery table (All / New Pairs / Final Stretch / Migrated)
+
+Sorting by:
+
+Price
+
+24h %
+
+Volume
+
+Liquidity
+
+Market Cap
+
+Live price updates (WebSocket mock)
+
+Skeleton loading & shimmer states
+
+Responsive layout (down to 320px)
+
+Smooth hover & interaction effects
+
+UI / UX
+
+Color-coded price changes (green/red)
+
+Tooltips for financial metrics
+
+Clean, minimal, trading-style UI
+
+No layout shifts (CLS-safe)
+
+🛠️ Tech Stack
+Frontend
+
+Next.js 14 (App Router)
+
+TypeScript (strict)
+
+Tailwind CSS
+
+Redux Toolkit (state management)
+
+React Query (data fetching)
+
+Atomic Design Architecture
+
+Backend
+
+Node.js
+
+Express
+
+REST API
+
+WebSocket (ws) for live price updates
+
+Deployment
+
+Frontend: Vercel
+
+Backend: Render
+
+🧱 Project Structure
+axiom-pulse/
+├── src/
+│   ├── app/                # Next.js App Router
+│   ├── components/         # Atomic UI (molecules / organisms / ui)
+│   ├── hooks/              # Custom React hooks
+│   ├── lib/                # API helpers
+│   ├── store/              # Redux Toolkit store
+│   └── types/              # TypeScript types
+├── server/                 # REST + WebSocket backend
+└── README.md
+
+🔄 API Details
+REST API
+GET /api/tokens
+
+
+Returns token list used in the table.
+
+WebSocket
+wss://axiom-pulse.onrender.com
+
+
+Sends live token price updates every few seconds
+
+Used to simulate real-time market behavior
+
+⚙️ Environment Variables
+Frontend (.env.local)
+NEXT_PUBLIC_API_URL=https://axiom-pulse.onrender.com
+
+▶️ Local Development
+Frontend
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Backend
+cd server
+npm install
+node index.js
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📈 Performance
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Lighthouse score ≥ 90 (mobile & desktop)
 
-## Learn More
+Memoized components
 
-To learn more about Next.js, take a look at the following resources:
+Optimized re-renders
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+No blocking layouts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Atomic architecture for maximum reusability
 
-## Deploy on Vercel
+React Query + Redux separation for async vs shared state
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Mock WebSocket updates to simulate real-time trading data
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Strict TypeScript for safer scaling
+
+👤 Author
+Dineshkumar D
+Frontend / Full-Stack Developer
+GitHub: https://github.com/dineshkumardk
